@@ -1,8 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-// } Driver Code Ends
-
 class Solution{
 	
 	int ans;
@@ -99,41 +94,3 @@ class Solution{
        	return res;
 	}
 };
-
-
-//{ Driver Code Starts.
-
-int main() 
-{
-   	int t;
-    cin >> t;
-    while (t--)
-    {
-    	int n;
-        cin >> n;
-        
-        vector<vector<int>> edges(n-1, vector<int> (3, 0));
-
-        for(int i = 0; i < n-1; i++)
-        {
-        	for(int j = 0; j < 3; j++)
-        	{
-        		cin >> edges[i][j];
-        	}
-        }
-
-        int q;
-        cin >> q;
-        vector<int> queries(q);
-        for(int i = 0; i < q; i++)
-        	cin >> queries[i];
-
-    	Solution obj;
-    	vector<int> ans = obj.maximumWeight(n, edges, q, queries);
-
-    	for(auto i:ans)
-    		cout << i << " ";
-    	cout << "\n"; 
-    }
-    return 0;
-}
